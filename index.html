@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 2 - Calculadora de Propina</title>
+
+    <!-- Aquí conecto el archivo de estilos (colores, tamaños y diseño) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Tarjeta principal: aquí está todo el contenido de la calculadora -->
+    <main class="tarjeta">
+
+      <!-- Logo y títulos de la página -->
+      <img src="logo.webp" alt="Logo" class="imagen" />
+      <h1>Calculadora de Propina</h1>
+      <p class="subtitulo">
+        Ingresa el monto total de la cuenta y <br> el porcentaje de propina a
+        aplicar
+    </p>
+
+      <!-- Formulario: donde el usuario escribe los datos -->
+      <form id="formulario" novalidate>
+
+        <!-- Campo 1: monto de la cuenta -->
+        <div class="campo">
+          <label for="monto">Monto de la cuenta (Bs) - sin puntos de miles</label>
+          <input type="number" id="monto" placeholder="Ej: 10000" step="any" />
+        </div>
+
+        <!-- Campo 2: porcentaje de propina -->
+        <div class="campo">
+          <label for="porcentaje">Porcentaje de propina (%)</label>
+          <input
+            type="number"
+            id="porcentaje"
+            placeholder="Ej: 10%"
+            step="any"
+          />
+        </div>
+
+        <!-- Botones: uno calcula y el otro borra todo -->
+        <div class="botones">
+          <button type="submit" class="btn btn-calcular">Calcular</button>
+          <button type="button" id="btnLimpiar" class="btn btn-limpiar">
+            Limpiar
+          </button>
+        </div>
+      </form>
+
+      <!-- Mensaje de error: está oculto y solo sale si algo se escribe mal -->
+      <p id="mensajeError" class="mensaje-error" hidden></p>
+
+      <!-- Resultados: también oculto hasta que se presione Calcular -->
+      <section id="resultados" class="resultados" hidden>
+        <h2>Desglose</h2>
+
+        <!-- Cada fila muestra el nombre a la izquierda y el valor a la derecha -->
+        <div class="fila">
+          <span>Monto de la cuenta</span>
+          <span id="resMonto"></span>
+        </div>
+        <div class="fila">
+          <span>Porcentaje de propina</span>
+          <span id="resPorcentaje"></span>
+        </div>
+        <div class="fila">
+          <span>Valor de la propina</span>
+          <span id="resPropina"></span>
+        </div>
+
+        <!-- Fila final: lo que se debe pagar en total -->
+        <div class="fila total">
+          <span>Total a pagar</span>
+          <span id="resTotal"></span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Aquí conecto el JavaScript, que hace los cálculos y muestra los resultados -->
+    <script src="script.js"></script>
+  </body>
+</html>

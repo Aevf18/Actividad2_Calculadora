@@ -1,0 +1,164 @@
+/*variables de colores generales*/
+:root {
+    --color-fondo: #649ce1;
+    --color-tarjeta: #ffffff;
+    --color-texto: #1f2937;
+    --color-texto-suave: #6b7280;
+    --color-principal: #2563eb;
+    --color-principal-oscuro: #1d4ed8;
+    --color-secundario: #e5e7eb;
+    --color-error: #dc2626;
+    --color-error-fondo: #fee2e2;
+    --color-total: #16a34a;
+    --radio: 12px;
+    --fuente: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+/*  Base  */
+* {
+    box-sizing: border-box;
+}
+/*  Estilos del cuerpo y la tarjeta  */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: var(--fuente);
+    background: var(--color-fondo);
+    color: var(--color-texto);
+}
+/*  Estilos gráficos de la tarjeta */
+.imagen {
+    display: block;
+    margin: 0 auto 16px;
+    width: 180px;
+    height: auto;
+    border-radius: 65%;
+    
+}
+/*  Estilos de la tarjeta  */
+.tarjeta {
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    background: var(--color-tarjeta);
+    border-radius: var(--radio);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+/*  Estilos del título  */
+h1 {
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+/*  Estilos del subtítulo  */
+.subtitulo {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+}
+/*  Estilos de los campos  */
+.campo {
+    margin-bottom: 16px;
+}
+/*  Estilo del label  */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+/*  Estilos entrada  */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--color-secundario);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+/*  Estilo del input cuando está enfocado  */
+input:focus {
+    border-color: var(--color-principal);
+}
+/*  Estilos de los botones  */
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+/* Estilos de los botones  */
+.btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+/* Estilo del botón cuando se presiona  */
+.btn:active {
+    transform: scale(0.97);
+}
+/*  Estilos del botón calcular  */
+.btn-calcular {
+    background: var(--color-principal);
+    color: #ffffff;
+}
+/*  Estilo del botón calcular cuando se pasa el mouse por encima  */
+.btn-calcular:hover {
+    background: var(--color-principal-oscuro);
+}
+/*  Estilo del botón limpiar  */
+.btn-limpiar {
+    background: var(--color-secundario);
+    color: var(--color-texto);
+}
+/*  Estilo del botón limpiar cuando se pasa el mouse por encima  */
+.btn-limpiar:hover {
+    background: #d1d5db;
+}
+/*  Estilos del mensaje de error  */
+.mensaje-error {
+    margin: 16px 0 0;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: var(--color-error);
+    background: var(--color-error-fondo);
+    border-radius: 8px;
+}
+/*  Estilos de los resultados  */
+.resultados {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 2px dashed var(--color-secundario);
+}
+/*  Estilos del título de los resultados  */
+.resultados h2 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+}
+/*  Estilos de las filas de los resultados  */
+.fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-secundario);
+}
+/*  Estilos de la fila total  */
+.fila.total {
+    margin-top: 6px;
+    border-bottom: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-total);
+}
+[hidden] {
+    display: none !important;
+}
